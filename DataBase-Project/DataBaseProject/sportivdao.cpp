@@ -5,11 +5,12 @@
 #include<QMessageBox>
 #include "sportiv.h"
 #include "mainwindow.h"
+#include<iostream>
 
 SportivDao::SportivDao(){
 
 }
-//SportivDao::SportivDao(QSqlDatabase& m_db) {
+//SportivDao::SportivDao(QSqlDatabase& m_db): m_db(m_db) {
 
 //}
 
@@ -20,6 +21,8 @@ void SportivDao::existTable()
 void SportivDao::AddSportiv(Sportiv& sportiv)
 {
    //aici m_db este null
+    //mw->getDataBase(*m_db);
+    m_db = mw->getDataBase();
     QSqlQuery query(m_db);
         query.prepare("INSERT INTO sportiv values(:id, :nume, :prenume, :varsta, :greutate, :tara, :gen, :id_club, :id_categorie_greutate,"
                       ":id_categorie_varsta, :id_categorie_gen)");

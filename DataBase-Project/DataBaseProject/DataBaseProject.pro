@@ -30,7 +30,13 @@ SOURCES += \
     addsportiv.cpp \
     sportiv.cpp \
     sportivdao.cpp \
-    administrarecompetitiepage.cpp
+    administrarecompetitiepage.cpp \
+    categoriegen.cpp \
+    categoriegreutate.cpp \
+    categorievarsta.cpp \
+    clasamentorganizatii.cpp \
+    clasamentsportivi.cpp \
+    clubsportiv.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,7 +44,13 @@ HEADERS += \
     addsportiv.h \
     sportiv.h \
     sportivdao.h \
-    administrarecompetitiepage.h
+    administrarecompetitiepage.h \
+    categoriegen.h \
+    categoriegreutate.h \
+    categorievarsta.h \
+    clasamentorganizatii.h \
+    clasamentsportivi.h \
+    clubsportiv.h
 
 FORMS += \
         mainwindow.ui \
