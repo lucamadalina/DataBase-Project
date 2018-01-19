@@ -14,7 +14,7 @@
 #include <QPixmap>
 #include <QActionGroup>
 
-
+static QSqlDatabase m_db;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
+
 
     QString hostName;
     QString databaseName;
@@ -35,20 +36,19 @@ MainWindow::MainWindow(QWidget *parent) :
     m_db.setUserName(userName);
     m_db.setPassword(password);
     bool ok = m_db.open();
-//    if(!ok)
-//    {
-//       ui->statusBar->showMessage(tr("Database not connected!"));
-//    }
-//    else
-//    {
-//        ui->statusBar->showMessage(tr("Database connected!"));
-//    }
+    if(!ok)
+    {
+       ui->statusBar->showMessage(tr("Database not connected!"));
+    }
+    else
+    {
+        ui->statusBar->showMessage(tr("Database connected!"));
+    }
 //    StartPage pag;
 //    this->hide();
 //    pag.setModal(true);
 //    pag.exec();
    }
-
 
 MainWindow::~MainWindow()
 {
@@ -91,6 +91,7 @@ void MainWindow::on_p_AdCampionat_clicked()
     pag.setModal(true);
     pag.exec();
 }
-QSqlDatabase MainWindow::getDb(){
-    return this->m_db;
-}
+ QSqlDatabase MainWindow::getDataBase()
+ {
+     return m_db;
+  }

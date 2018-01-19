@@ -26,9 +26,9 @@ void Campionat::on_b_back_clicked()
     mn->show();
 }
 
-void Campionat::on_ad_Sportiv_clicked()
-{
-    adSportiv = new addSportiv();
-    this->hide();
-    adSportiv->show();
-}
+//void Campionat::on_ad_Sportiv_clicked()
+//{
+//    adSportiv = new addSportiv();
+//    this->hide();
+//    adSportiv->show();
+//}

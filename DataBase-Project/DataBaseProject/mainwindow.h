@@ -20,7 +20,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    QSqlDatabase getDb();
+    static QSqlDatabase getDataBase();
 
 
 private slots:
@@ -28,15 +28,13 @@ private slots:
     void readSettings(QString &hostName, QString &databaseName, QString &userName, QString &password);
 
     void on_p_AdCompetitie_clicked();
-
     void on_p_Clasament_clicked();
-
     void on_p_AdCampionat_clicked();
 
 
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase m_db;
+
 };
 
 #endif // MAINWINDOW_H

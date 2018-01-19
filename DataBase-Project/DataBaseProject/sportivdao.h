@@ -11,7 +11,7 @@ class SportivDao
 {
 public:
     SportivDao();
-   // SportivDao(QSqlDatabase &m_db);
+    //SportivDao(QSqlDatabase &m_db);
     void existTable();
     void AddSportiv(Sportiv& sportiv);
     void RemoveSportiv(int id);
@@ -23,8 +23,7 @@ public:
 private:
     bool SportivExist(int id);
     MainWindow* mw;
-    const QSqlDatabase& m_db = mw->getDb();
-
+    QSqlDatabase m_db;
 };
 
 #endif // SPORTIVDAO_H

@@ -31,7 +31,7 @@ public slots:
     void on_b_back_clicked();
 
 private slots:
-    void on_ad_Sportiv_clicked();
+    //void on_ad_Sportiv_clicked();
 
 private:
     Ui::Campionat *ui;
