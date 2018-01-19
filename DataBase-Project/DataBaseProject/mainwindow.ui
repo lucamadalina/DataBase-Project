@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>334</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(77, 77, 77);
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>62</y>
+      <width>301</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="p_Clasament">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(200, 200, 200);
+font: 75 14pt &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Clasament</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="p_AdCompetitie">
+       <property name="styleSheet">
+        <string notr="true">font: 75 14pt &quot;Arial&quot;;
+background-color: rgb(200, 200, 200);</string>
+       </property>
+       <property name="text">
+        <string>Administrare Competitie</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="p_AdCampionat">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 14pt &quot;Arial&quot;;
+background-color: rgb(200, 200, 200);</string>
+       </property>
+       <property name="text">
+        <string>Campionat</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
