@@ -6,7 +6,6 @@
 #include<iostream>
 #include "campionat.h"
 #include "campionatdao.h"
-
 CampionatDao::CampionatDao()
 {
 
@@ -16,24 +15,22 @@ void CampionatDao::existTable()
 
 }
 
-void CampionatDao::AddCampionat(Campionat &campionat)
+void CampionatDao::AddCampionat(Campionat& campionat)
 {
 
     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
-        query.prepare("INSERT INTO competitie values(:id, :denumire, :puncte_participare, :locatie, :puncte_runda1, :puncte_semifinala, :puncte_finala");
-            query.bindValue(":id", campionat.getId());
-            query.bindValue(":denumire", campionat.getDenumire());
-            query.bindValue(":puncte_participare", campionat.getPuncteParticipare());
-            query.bindValue(":locatie", campionat.getLocatie());
-            query.bindValue(":puncte_runda1", campionat.getPuncteRunda1());
-            query.bindValue(":puncte_semifinala", campionat.getPuncteSemiFinala());
-            query.bindValue(":puncte_finala", campionat.getPuncteFinala());
-            int ok = query.exec();
-            if(ok == 0)
-            {
-               //QMessageBox::warning(this, tr("Eroare"), tr("id, varsta, greutate, id_club trebuie sa fie de tip int"));
-            }
+    int id = campionat.getId();
+    QString denumire = campionat.getDenumire();
+    QString locatie = campionat.getLocatie();
+    int pp = campionat.getPuncteParticipare();
+    int p1 = campionat.getPuncteRunda1();
+    int ps = campionat.getPuncteSemiFinala();
+    int pf = campionat.getPuncteFinala();
+    QString values = "INSERT INTO competitie values("+QString::number(id)+", '"+denumire+"', "+QString::number(pp)+", '"+locatie+"', "+QString::number(p1)+", "+QString::number(ps)+", "+QString::number(pf)+")";
+
+    query.prepare("INSERT INTO competitie values(:id, :denumire, :puncte_participare, :locatie, :puncte_runda1, :puncte_semifinala, :puncte_finala");
+    query.exec(values);
 }
 
 

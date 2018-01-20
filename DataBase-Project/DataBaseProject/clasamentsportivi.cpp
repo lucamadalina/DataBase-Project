@@ -4,7 +4,7 @@ ClasamentSportivi::ClasamentSportivi()
 {
 
 }
-ClasamentSportivi::ClasamentSportivi(int id,int id_sportiv,int id_categorie_greutate,int id_categorie_varsta,
+ClasamentSportivi::ClasamentSportivi(int id,int id_categorie_greutate,int id_categorie_varsta,
                                      int id_categorie_gen,int nr_puncte){
     this->id = id;
     this->id_categorie_gen = id_categorie_gen;

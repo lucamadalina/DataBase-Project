@@ -6,7 +6,7 @@ class ClasamentSportivi
 {
 public:
     ClasamentSportivi();
-    ClasamentSportivi(int id,int id_sportiv,int id_categorie_greutate,int id_categorie_varsta,int id_categorie_gen,int nr_puncte);
+    ClasamentSportivi(int id,int id_categorie_greutate,int id_categorie_varsta,int id_categorie_gen,int nr_puncte);
     int getId();
     int getIdCategorieGreutate();
     int getIdCategorieVarsta();
