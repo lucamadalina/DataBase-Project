@@ -7,9 +7,9 @@ class ClasamentOrganizatii
 public:
     ClasamentOrganizatii();
     ClasamentOrganizatii(int id,int id_organiatie,int nr_puncte);
-    getId();
-    getIdOrganizatie();
-    getNumarPuncte();
+    int getId();
+    int getIdOrganizatie();
+    int getNumarPuncte();
 
 private:
     int id;

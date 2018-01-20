@@ -1,34 +1,46 @@
-#include "campionat.h"
-#include "ui_campionat.h"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
-#include "addsportiv.h"
+#include "campionat.h"
 
-Campionat::Campionat(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::Campionat)
-{
-    ui->setupUi(this);
-    QPixmap pix("C:/Users/Cristian/Desktop/DataBase/DataBase-Project/DataBaseProject/p1.jpg");
-    ui->picture->setPixmap(pix);
+
+Campionat::Campionat(int id, QString denumire, int puncteParticipare, QString locatie,
+                     int puncteRunda1, int puncteSemiFinala, int puncteFinala){
+    this->id = id;
+    this->denumire = denumire;
+    this->locatie = locatie;
+    this->puncteParticipare = puncteParticipare;
+    this->puncteRunda1 = puncteRunda1;
+    this->puncteSemiFinala = puncteSemiFinala;
+    this->puncteFinala = puncteFinala;
+
+}
+Campionat::~Campionat(){
+
+}
+int Campionat::getId(){
+    return this->id;
 }
 
-
-Campionat::~Campionat()
-{
-    delete ui;
+QString Campionat::getDenumire(){
+    return this->denumire;
 }
 
-void Campionat::on_b_back_clicked()
-{
-    mn = new MainWindow();
-    this->hide();
-    mn->show();
+QString Campionat::getLocatie(){
+    return this->locatie;
 }
 
-//void Campionat::on_ad_Sportiv_clicked()
-//{
-//    adSportiv = new addSportiv();
-//    this->hide();
-//    adSportiv->show();
-//}
+int Campionat::getPuncteParticipare(){
+    return this->puncteParticipare;
+}
+
+int Campionat::getPuncteRunda1(){
+    return this->puncteRunda1;
+}
+
+int Campionat::getPuncteSemiFinala(){
+    return this->puncteSemiFinala;
+}
+
+int Campionat::getPuncteFinala(){
+    return this->puncteFinala;
+}

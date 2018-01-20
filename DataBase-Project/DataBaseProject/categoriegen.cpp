@@ -11,6 +11,6 @@ CategorieGen::CategorieGen(int id, QString gen){
 int CategorieGen::getId(){
     return this->id;
 }
-SQtring CategorieGen::getGen(){
+QString CategorieGen::getGen(){
     return this->gen;
 }

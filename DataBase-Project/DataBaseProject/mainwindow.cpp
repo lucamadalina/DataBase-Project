@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "campionat.h"
+#include "AddCompetitie.h"
+#include "clasament.h"
 #include "administrarecompetitiepage.h"
 #include <QSqlQuery>
 #include <QSqlError>
@@ -44,10 +45,6 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         ui->statusBar->showMessage(tr("Database connected!"));
     }
-//    StartPage pag;
-//    this->hide();
-//    pag.setModal(true);
-//    pag.exec();
    }
 
 MainWindow::~MainWindow()
@@ -78,7 +75,7 @@ void MainWindow::on_p_AdCompetitie_clicked()
 
 void MainWindow::on_p_Clasament_clicked()
 {
-    Campionat pag;
+    Clasament pag;
     this->hide();
     pag.setModal(true);
     pag.exec();
@@ -86,7 +83,7 @@ void MainWindow::on_p_Clasament_clicked()
 
 void MainWindow::on_p_AdCampionat_clicked()
 {
-    Campionat pag;
+    AddCompetitie pag;
     this->hide();
     pag.setModal(true);
     pag.exec();

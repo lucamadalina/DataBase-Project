@@ -9,12 +9,12 @@ ClasamentOrganizatii::ClasamentOrganizatii(int id,int id_organiatie,int nr_punct
     this->id_organiatie = id_organiatie;
     this->nr_puncte = nr_puncte;
 }
-ClasamentOrganizatii::getId(){
+int ClasamentOrganizatii::getId(){
     return this->id;
 }
-ClasamentOrganizatii::getIdOrganizatie(){
+int ClasamentOrganizatii::getIdOrganizatie(){
     return this->id_organiatie;
 }
-ClasamentOrganizatii::getNumarPuncte(){
+int ClasamentOrganizatii::getNumarPuncte(){
     return this->nr_puncte;
 }

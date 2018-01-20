@@ -8,7 +8,7 @@ public:
     CategorieGen();
      CategorieGen(int id, QString gen);
      int getId();
-     SQtring getGen();
+     QString getGen();
 
 private:
     int id;

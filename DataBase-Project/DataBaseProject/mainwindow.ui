@@ -35,18 +35,6 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="p_Clasament">
-       <property name="styleSheet">
-        <string notr="true">
-background-color: rgb(200, 200, 200);
-font: 75 14pt &quot;Arial&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Clasament</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="p_AdCompetitie">
        <property name="styleSheet">
         <string notr="true">font: 75 14pt &quot;Arial&quot;;
@@ -67,7 +55,19 @@ background-color: rgb(200, 200, 200);</string>
 background-color: rgb(200, 200, 200);</string>
        </property>
        <property name="text">
-        <string>Campionat</string>
+        <string>Adaugare Competitie</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="p_Clasament">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(200, 200, 200);
+font: 75 14pt &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Clasament</string>
        </property>
       </widget>
      </item>
