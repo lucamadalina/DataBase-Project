@@ -39,7 +39,14 @@ SOURCES += \
     clubsportiv.cpp \
     clasament.cpp \
     campionatdao.cpp \
-    addcompetitie.cpp
+    addcompetitie.cpp \
+    addcategoriegreutate.cpp \
+    categoriegendao.cpp \
+    categoriegreutatedao.cpp \
+    categorievarstadao.cpp \
+    clubsportivdao.cpp \
+    addcategorievarsta.cpp \
+    addclubsportiv.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -56,14 +63,24 @@ HEADERS += \
     clasament.h \
     CampionatDao.h \
     AddCompetitie.h \
-    campionat.h
+    campionat.h \
+    addcategoriegreutate.h \
+    categoriegendao.h \
+    categoriegreutatedao.h \
+    categorievarstadao.h \
+    clubsportivdao.h \
+    addcategorievarsta.h \
+    addclubsportiv.h
 
 FORMS += \
         mainwindow.ui \
     addsportiv.ui \
     administrarecompetitiepage.ui \
     clasament.ui \
-    AddCompetitie.ui
+    AddCompetitie.ui \
+    addcategoriegreutate.ui \
+    addcategorievarsta.ui \
+    addclubsportiv.ui
 
 RESOURCES += \
     images.qrc

@@ -35,6 +35,7 @@ void addSportiv::on_b_adSportiv_clicked()
 
        } else {
            sportivDao.AddSportiv(sportiv);
+           on_b_back_clicked();
        }
 }
 

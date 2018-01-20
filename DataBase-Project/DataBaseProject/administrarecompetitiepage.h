@@ -18,12 +18,19 @@ public:
 private slots:
     void on_b_back_clicked();
 
-    void on_pushButton_5_clicked();
+    void on_b_adCatGreutate_clicked();
+
+    void on_b_adCatVarsta_clicked();
+
+    void on_b_adClubSportiv_clicked();
+
+    void on_b_adSportiv_clicked();
 
 private:
     Ui::AdministrareCompetitiePage *ui;
     MainWindow *mn;
     AdministrareCompetitiePage * adPage;
+
 };
 
 #endif // ADMINISTRARECOMPETITIEPAGE_H
