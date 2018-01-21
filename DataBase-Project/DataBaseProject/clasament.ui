@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(77, 77, 77);</string>
+   <string notr="true">background-color: rgb(170, 170, 127);
+</string>
   </property>
   <widget class="QTextEdit" name="cat_Greutate">
    <property name="geometry">
@@ -26,7 +27,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(200, 200, 200);</string>
+    <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(243, 243, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -55,8 +57,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(200, 200, 200);
-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(243, 243, 182);
+color: rgb(0, 0, 0);</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="cat_Varsta">
@@ -69,7 +71,8 @@ color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(200, 200, 200);</string>
+    <string notr="true">background-color: rgb(243, 243, 182);
+color: rgb(0, 0, 0);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -114,7 +117,8 @@ color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
+    <string notr="true">
+background-color: rgb(245, 245, 184);</string>
    </property>
    <property name="text">
     <string>Back</string>
@@ -123,17 +127,31 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>140</y>
-     <width>80</width>
-     <height>18</height>
+     <x>120</x>
+     <y>240</y>
+     <width>121</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(200, 200, 200);</string>
+    <string notr="true">
+background-color: rgb(245, 245, 184);</string>
    </property>
    <property name="text">
     <string>Afisati clasamentul</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>226</x>
+     <y>82</y>
+     <width>121</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

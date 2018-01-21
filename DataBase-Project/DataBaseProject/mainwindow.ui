@@ -17,8 +17,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(77, 77, 77);
-</string>
+   <string notr="true">background-color: rgb(170, 170, 127);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="enabled">
@@ -27,9 +26,9 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>112</x>
-      <y>62</y>
-      <width>301</width>
+      <x>90</x>
+      <y>130</y>
+      <width>331</width>
       <height>181</height>
      </rect>
     </property>
@@ -38,7 +37,8 @@
       <widget class="QPushButton" name="p_AdCompetitie">
        <property name="styleSheet">
         <string notr="true">font: 75 14pt &quot;Arial&quot;;
-background-color: rgb(200, 200, 200);</string>
+background-color: rgb(243, 243, 182);
+</string>
        </property>
        <property name="text">
         <string>Administrare Competitie</string>
@@ -52,7 +52,7 @@ background-color: rgb(200, 200, 200);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 14pt &quot;Arial&quot;;
-background-color: rgb(200, 200, 200);</string>
+background-color: rgb(243, 243, 182);</string>
        </property>
        <property name="text">
         <string>Adaugare Competitie</string>
@@ -62,8 +62,7 @@ background-color: rgb(200, 200, 200);</string>
      <item>
       <widget class="QPushButton" name="p_Clasament">
        <property name="styleSheet">
-        <string notr="true">
-background-color: rgb(200, 200, 200);
+        <string notr="true">background-color: rgb(243, 243, 182);
 font: 75 14pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
@@ -72,6 +71,22 @@ font: 75 14pt &quot;Arial&quot;;</string>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="picture">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>421</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 170, 127);</string>
+  </property>
   <widget class="QPushButton" name="b_addClubSportiv">
    <property name="geometry">
     <rect>
@@ -21,6 +24,9 @@
      <width>75</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
    <property name="text">
     <string>Adauga</string>
@@ -35,6 +41,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
+   </property>
   </widget>
   <widget class="QTextEdit" name="denumire">
    <property name="geometry">
@@ -44,6 +53,9 @@
      <width>104</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="adresa">
@@ -55,6 +67,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
+   </property>
   </widget>
   <widget class="QTextEdit" name="tara">
    <property name="geometry">
@@ -64,6 +79,9 @@
      <width>191</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -123,12 +141,25 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>31</width>
+     <width>41</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;&lt;</string>
+    <string>Inapoi</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="picture">
+   <property name="geometry">
+    <rect>
+     <x>246</x>
+     <y>60</y>
+     <width>131</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

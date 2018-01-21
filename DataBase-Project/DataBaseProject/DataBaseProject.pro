@@ -78,12 +78,32 @@ FORMS += \
     administrarecompetitiepage.ui \
     clasament.ui \
     AddCompetitie.ui \
+    addclubsportiv.ui \
     addcategoriegreutate.ui \
     addcategorievarsta.ui \
     addclubsportiv.ui
 
+
 RESOURCES += \
-    images.qrc
+    images.qrc \
+    p1.jpg \
+    p6.jpg \
+    p7.jpg \
+    p8.jpg
 
 DISTFILES += \
-    p1.jpg
+    p1.jpg \
+    p6.jpg \
+    p7.jpg \
+    p8.jpg \
+    p1.jpg \
+    p2.jpg \
+    p4.jpg \
+    p5.jpg \
+    p6.jpg \
+    p7.jpg \
+    p8.jpg \
+    P9.jpg \
+    P10.jpg \
+    P12.jpg \
+    P11.png

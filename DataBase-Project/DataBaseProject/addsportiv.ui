@@ -20,7 +20,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(77, 77, 77);</string>
+   <string notr="true">background-color: rgb(170, 170, 127);</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -61,7 +61,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">
+background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -87,7 +88,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -113,7 +114,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -139,7 +140,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -165,7 +166,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -191,7 +192,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -217,7 +218,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QPushButton" name="b_adSportiv">
@@ -230,7 +231,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
+    <string notr="true">
+background-color: rgb(247, 247, 182);
 color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
@@ -263,7 +265,7 @@ color: rgb(0, 0, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
    </property>
   </widget>
   <widget class="QPushButton" name="b_back">

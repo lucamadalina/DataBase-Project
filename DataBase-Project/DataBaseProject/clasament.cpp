@@ -6,6 +6,7 @@ Clasament::Clasament(QWidget *parent) :
     ui(new Ui::Clasament)
 {
     ui->setupUi(this);
+
 }
 
 Clasament::~Clasament()

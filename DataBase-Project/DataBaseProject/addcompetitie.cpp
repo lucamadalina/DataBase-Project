@@ -1,6 +1,7 @@
 #include "AddCompetitie.h"
 #include "ui_AddCompetitie.h"
 #include "campionat.h"
+#include<QDir>
 
 class CampionatDao;
 
@@ -9,8 +10,8 @@ AddCompetitie::AddCompetitie(QWidget *parent) :
     ui(new Ui::AddCompetitie)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/Cristian/Desktop/DataBase/DataBase-Project/DataBaseProject/p1.jpg");
-    ui->picture->setPixmap(pix);
+    QPixmap pix(":/p1.jpg");
+    ui->picture->setPixmap(pix.scaled(161, 111));
 }
 
 AddCompetitie::~AddCompetitie()

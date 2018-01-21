@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(77, 77, 77);</string>
+   <string notr="true">
+background-color: rgb(170, 170, 127);</string>
   </property>
   <widget class="QPushButton" name="b_back">
    <property name="geometry">
@@ -45,7 +46,8 @@
     <item>
      <widget class="QPushButton" name="b_adCatGreutate">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
+       <string notr="true">
+background-color: rgb(247, 247, 182);</string>
       </property>
       <property name="text">
        <string>Adaugare categorie greutate</string>
@@ -55,7 +57,8 @@
     <item>
      <widget class="QPushButton" name="b_adCatVarsta">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
+       <string notr="true">
+background-color: rgb(247, 247, 182);</string>
       </property>
       <property name="text">
        <string>Adaugare categorie varsta</string>
@@ -63,19 +66,10 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="b_adCatGen">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
-      </property>
-      <property name="text">
-       <string>Adaugare categorie gen</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="b_adClubSportiv">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
+       <string notr="true">
+background-color: rgb(247, 247, 182);</string>
       </property>
       <property name="text">
        <string>Adaugare club sportiv</string>
@@ -85,7 +79,7 @@
     <item>
      <widget class="QPushButton" name="b_adSportiv">
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
+       <string notr="true">background-color: rgb(247, 247, 182);</string>
       </property>
       <property name="text">
        <string>Adaugare sportiv</string>

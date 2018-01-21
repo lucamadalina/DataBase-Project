@@ -3,6 +3,7 @@
 #include<categoriegreutatedao.h>
 #include <QDialog>
 #include "administrarecompetitiepage.h"
+#include "addcategorievarsta.h"
 namespace Ui {
 class addcategoriegreutate;
 }
@@ -22,10 +23,14 @@ private slots:
 
     void on_b_back_clicked();
 
+    void on_home_clicked();
+
 private:
     Ui::addcategoriegreutate *ui;
     CategorieGreutateDao categorieGreutateDao;
     AdministrareCompetitiePage * adComPage;
+    MainWindow* mn;
+    addCategorieVarsta* addCatVarsta;
 };
 
 #endif // ADDCATEGORIEGREUTATE_H

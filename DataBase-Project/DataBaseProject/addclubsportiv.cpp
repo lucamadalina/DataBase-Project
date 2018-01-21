@@ -7,6 +7,9 @@ addClubSportiv::addClubSportiv(QWidget *parent) :
     ui(new Ui::addClubSportiv)
 {
     ui->setupUi(this);
+    QPixmap pix(":/p6.jpg");
+    ui->picture->setPixmap(pix.scaled(131, 131));
+
 }
 
 addClubSportiv::~addClubSportiv()

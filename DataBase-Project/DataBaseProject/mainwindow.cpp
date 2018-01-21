@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+    QPixmap pix(":/p7.jpg");
+    ui->picture->setPixmap(pix.scaled(421, 91));
 
     QString hostName;
     QString databaseName;

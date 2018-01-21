@@ -53,3 +53,11 @@ void addcategoriegreutate::on_b_back_clicked()
     this->hide();
     adComPage->show();
 }
+
+void addcategoriegreutate::on_home_clicked()
+{
+    mn = new MainWindow();
+    this->hide();
+    mn->show();
+
+}
