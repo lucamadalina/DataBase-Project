@@ -25,3 +25,8 @@ void Clasament::on_pushButton_clicked()
 {
     //select
 }
+
+void Clasament::on_pushButton_2_clicked()
+{
+    
+}

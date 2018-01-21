@@ -1,0 +1,78 @@
+CREATE TABLE IF NOT EXISTS "sportiv" (
+  "id" bigserial primary key ,
+  "nume" varchar(50) DEFAULT NULL,
+  "prenume" varchar(50) DEFAULT NULL,
+  "varsta" int DEFAULT NULL,
+  "greutate" int DEFAULT NULL,
+  "tara" varchar(50) DEFAULT NULL,
+  "gen" varchar(50) DEFAULT NULL,
+  "id_club" int DEFAULT NULL,
+  "id_categorie_greutate" int DEFAULT NULL,
+  "id_categorie_varsta" int DEFAULT NULL,
+  "id_categorie_gen" int DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "competitie" (
+  "id" bigserial primary key,
+  "denumire" varchar(50) DEFAULT NULL,
+  "puncte_participare" int NOT NULL,
+  "locatie" varchar(50) DEFAULT NULL,
+  "puncte_runda1" int DEFAULT NULL,
+  "puncte_semifinala" int DEFAULT NULL,
+  "puncte_finala" int DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS club_sportiv (
+  "id" bigserial primary key,
+  "denumire" varchar(50) DEFAULT NULL,
+  "tara" varchar(50) DEFAULT NULL,
+  "adresa" varchar(50) DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "clasament_sportiv" (
+  "id" bigserial primary key,
+  "id_sportiv" int DEFAULT NULL,
+  "id_categorie_greutate" int DEFAULT NULL,
+  "id_categorie_varsta" int DEFAULT NULL,
+  "id_categorie_gen" int DEFAULT NULL,
+  "numar_puncte" int DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "clasament_organizatii" (
+  "id" bigserial primary key,
+  "id_organizatie" int DEFAULT NULL,
+  "numar_puncte" int DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "categorie_gen" (
+  "id" bigserial primary key,
+ "gen" varchar(50) DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "categorie_greutate" (
+  "id" bigserial primary key,
+  "prag_min" int DEFAULT NULL,
+  "prag_max" int DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "categorie_varsta" (
+  "id" bigserial primary key,
+  "prag_min" int DEFAULT NULL,
+  "prag_max" int DEFAULT NULL
+);
+
+ALTER TABLE "clasament_sportiv"
+	ADD CONSTRAINT "FK_clasament_sportiv_sportiv" FOREIGN KEY ("id_sportiv") REFERENCES "sportiv" ("id"),
+	ADD CONSTRAINT "FK_clasament_sportiv_categorie_greutate" FOREIGN KEY ("id_categorie_greutate") REFERENCES "categorie_greutate" ("id"),
+	ADD CONSTRAINT "FK_clasament_sportiv_categorie_varsta" FOREIGN KEY ("id_categorie_varsta") REFERENCES "categorie_varsta" (id),
+	ADD CONSTRAINT "FK_clasament_sportiv_categorie_gen" FOREIGN KEY ("id_categorie_gen") REFERENCES "categorie_gen" (id);
+
+
+ALTER TABLE "clasament_organizatii"
+	ADD CONSTRAINT "FK_clasament_organizatii_club_sportiv" FOREIGN KEY ("id_organizatie") REFERENCES "club_sportiv" (id);
+
+ALTER TABLE "sportiv"
+	ADD CONSTRAINT "FK_sportiv_club_sportiv" FOREIGN KEY ("id_club") REFERENCES "club_sportiv" (id),
+	ADD CONSTRAINT "FK_sportiv_categorie_greutate" FOREIGN KEY ("id_categorie_greutate") REFERENCES "categorie_greutate" (id),
+	ADD CONSTRAINT "FK_sportiv_categorie_varsta" FOREIGN KEY ("id_categorie_varsta") REFERENCES "categorie_varsta" (id),
+	ADD CONSTRAINT "FK_sportiv_categorie_gen" FOREIGN KEY ("id_categorie_gen") REFERENCES "categorie_gen" (id);
