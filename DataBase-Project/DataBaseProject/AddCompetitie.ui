@@ -218,9 +218,9 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>180</y>
+     <y>210</y>
      <width>161</width>
-     <height>111</height>
+     <height>81</height>
     </rect>
    </property>
    <property name="baseSize">
@@ -238,7 +238,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>10</x>
      <y>140</y>
-     <width>91</width>
+     <width>121</width>
      <height>16</height>
     </rect>
    </property>
@@ -265,7 +265,7 @@ color: rgb(255, 255, 255);</string>
   <widget class="QTextEdit" name="puncte_finala">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>150</x>
      <y>160</y>
      <width>91</width>
      <height>27</height>
@@ -278,7 +278,7 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>150</x>
      <y>140</y>
      <width>101</width>
      <height>20</height>
