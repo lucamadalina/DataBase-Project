@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "mainwindow.h"
+#include "viewclasament.h"
 namespace Ui {
 class Clasament;
 }
@@ -20,11 +21,12 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_b_viewclasament_clicked();
 
 private:
     Ui::Clasament *ui;
     MainWindow *mn;
+    ViewClasament *vc;
 };
 
 #endif // CLASAMENT_H

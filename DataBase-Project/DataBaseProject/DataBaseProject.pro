@@ -46,7 +46,10 @@ SOURCES += \
     categorievarstadao.cpp \
     clubsportivdao.cpp \
     addcategorievarsta.cpp \
-    addclubsportiv.cpp
+    addclubsportiv.cpp \
+    clasamentorganizatii.cpp \
+    clasamentorganizatii.cpp \
+    viewclasament.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -70,7 +73,10 @@ HEADERS += \
     categorievarstadao.h \
     clubsportivdao.h \
     addcategorievarsta.h \
-    addclubsportiv.h
+    addclubsportiv.h \
+    clasamentorganizatii.h \
+    clasamentorganizatii.h \
+    viewclasament.h
 
 FORMS += \
         mainwindow.ui \
@@ -81,7 +87,8 @@ FORMS += \
     addclubsportiv.ui \
     addcategoriegreutate.ui \
     addcategorievarsta.ui \
-    addclubsportiv.ui
+    addclubsportiv.ui \
+    viewclasament.ui
 
 
 RESOURCES += \

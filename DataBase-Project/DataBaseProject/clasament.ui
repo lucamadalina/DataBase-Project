@@ -118,7 +118,7 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">
-background-color: rgb(245, 245, 184);</string>
+background-color: rgb(247, 247, 182);</string>
    </property>
    <property name="text">
     <string>Back</string>
@@ -130,12 +130,11 @@ background-color: rgb(245, 245, 184);</string>
      <x>130</x>
      <y>230</y>
      <width>121</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-background-color: rgb(245, 245, 184);</string>
+    <string notr="true">background-color: rgb(245, 245, 184);</string>
    </property>
    <property name="text">
     <string>Afisati clasamentul</string>
@@ -154,17 +153,20 @@ background-color: rgb(245, 245, 184);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="b_viewclasament">
    <property name="geometry">
     <rect>
-     <x>134</x>
-     <y>270</y>
-     <width>121</width>
+     <x>70</x>
+     <y>300</y>
+     <width>201</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 182);</string>
+   </property>
    <property name="text">
-    <string>Clasament Organizatii</string>
+    <string>Afisati clasament organizatii</string>
    </property>
   </widget>
  </widget>

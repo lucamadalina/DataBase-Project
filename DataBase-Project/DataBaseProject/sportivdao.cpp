@@ -47,6 +47,7 @@ void SportivDao::AddSportiv(Sportiv& sportiv)
             }
 }
 int SportivDao::calculateIdCategorieGen(QString gen){
+     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM categorie_gen");
     query.exec();
@@ -62,6 +63,7 @@ int SportivDao::calculateIdCategorieGen(QString gen){
 }
 
 int SportivDao::calculateIdCategorieGreutate(int greutate){
+     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM categorie_greutate");
     query.exec();
@@ -78,6 +80,7 @@ int SportivDao::calculateIdCategorieGreutate(int greutate){
 }
 
 int SportivDao::calculateIdCategorieVarsta(int varsta){
+     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM categorie_varsta");
     query.exec();
@@ -95,6 +98,7 @@ int SportivDao::calculateIdCategorieVarsta(int varsta){
 
 void SportivDao::RemoveSportiv(int id)
 {
+    m_db = mw->getDataBase();
     QSqlQuery query(m_db);
     query.prepare("DELETE FROM Sportiv WHERE Id = (:id)");
     query.bindValue(":id", id);
@@ -103,6 +107,7 @@ void SportivDao::RemoveSportiv(int id)
 
 std::vector<Sportiv> SportivDao::getSportivi()
 {
+     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM sportiv");
     query.exec();

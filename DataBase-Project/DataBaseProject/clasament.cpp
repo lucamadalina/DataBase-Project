@@ -26,7 +26,9 @@ void Clasament::on_pushButton_clicked()
     //select
 }
 
-void Clasament::on_pushButton_2_clicked()
+void Clasament::on_b_viewclasament_clicked()
 {
-
+    vc = new ViewClasament();
+    this->hide();
+    vc->show();
 }
