@@ -4,6 +4,17 @@
 #include <QDialog>
 #include "mainwindow.h"
 #include "viewclasament.h"
+#include <QDialog>
+#include "mainwindow.h"
+#include "viewclasament.h"
+#include <QtGui>
+#include <QtCore>
+#include <QComboBox>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include<QVariant>
+#include <QtAlgorithms>
+
 namespace Ui {
 class Clasament;
 }
@@ -27,6 +38,10 @@ private:
     Ui::Clasament *ui;
     MainWindow *mn;
     ViewClasament *vc;
+    QSqlDatabase m_db;
+    void GetCategoriiVarsta();
+    void GetCategoriiGreutate();
+    void GetCategoriiGen();
 };
 
 #endif // CLASAMENT_H
