@@ -38,9 +38,10 @@ void Clasament::GetCategoriiVarsta()
     std::vector<QString> list_of_categorie_varsta;
     while(query.next())
     {
+        QString id = query.value("id").toString();
         QString prag_min = query.value("prag_min").toString();
         QString prag_max = query.value("prag_max").toString();
-        list_of_categorie_varsta.push_back(prag_min + "-" + prag_max);
+        list_of_categorie_varsta.push_back(id + ", " + prag_min + "-" + prag_max);
     }
     qSort(list_of_categorie_varsta.begin(), list_of_categorie_varsta.end());
     for(std::vector<QString>::const_iterator i = list_of_categorie_varsta.begin(); i != list_of_categorie_varsta.end(); ++i)
@@ -57,9 +58,10 @@ void Clasament::GetCategoriiGreutate()
     std::vector<QString> list_of_categorie_greutate;
     while(query.next())
     {
+        QString id = query.value("id").toString();
         QString prag_min = query.value("prag_min").toString();
         QString prag_max = query.value("prag_max").toString();
-        list_of_categorie_greutate.push_back(prag_min + "-" + prag_max);
+        list_of_categorie_greutate.push_back(id + ", "+ prag_min + "-" + prag_max);
     }
     qSort(list_of_categorie_greutate.begin(), list_of_categorie_greutate.end());
     for(std::vector<QString>::const_iterator i = list_of_categorie_greutate.begin(); i != list_of_categorie_greutate.end(); ++i)
@@ -75,9 +77,9 @@ void Clasament::GetCategoriiGen()
     query.exec();
     std::vector<QString> list_of_categorie_gen;
     while(query.next())
-    {
+    {   QString id = query.value("id").toString();
         QString gen = query.value("gen").toString();
-        list_of_categorie_gen.push_back(gen);
+        list_of_categorie_gen.push_back(id + "," + gen);
     }
     for(std::vector<QString>::const_iterator i = list_of_categorie_gen.begin(); i != list_of_categorie_gen.end(); ++i)
     {
@@ -90,4 +92,17 @@ void Clasament::on_b_afisaticlasamentul_clicked()
     vcs = new ViewClasamentSportivi();
     this->hide();
     vcs->show();
+}
+
+std::vector<QString> Clasament::GetMemberForAfisareClasament()
+{
+    std::vector<QString> lista_categoriilor_luptatorilor;
+    QString interval_varsta = ui->comboBox->currentText();
+    QString inveral_greutate = ui->comboBox_2->currentText();
+    QString gen = ui->comboBox_3->currentText();
+    lista_categoriilor_luptatorilor.push_back(interval_varsta);
+    lista_categoriilor_luptatorilor.push_back(inveral_greutate);
+    lista_categoriilor_luptatorilor.push_back(gen);
+
+    return lista_categoriilor_luptatorilor;
 }
