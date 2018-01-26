@@ -82,7 +82,7 @@ background-color: rgb(247, 247, 182);</string>
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="b_afisaticlasamentul">
    <property name="geometry">
     <rect>
      <x>130</x>

@@ -22,10 +22,6 @@ void Clasament::on_b_back_clicked()
     mn->show();
 }
 
-void Clasament::on_pushButton_clicked()
-{
-    //select
-}
 
 void Clasament::on_b_viewclasament_clicked()
 {
@@ -87,4 +83,11 @@ void Clasament::GetCategoriiGen()
     {
         ui->comboBox_3->addItem(*i);
     }
+}
+
+void Clasament::on_b_afisaticlasamentul_clicked()
+{
+    vcs = new ViewClasamentSportivi();
+    this->hide();
+    vcs->show();
 }

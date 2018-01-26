@@ -14,7 +14,7 @@
 #include <QSqlQuery>
 #include<QVariant>
 #include <QtAlgorithms>
-
+#include "viewclasamentsportivi.h"
 namespace Ui {
 class Clasament;
 }
@@ -30,14 +30,15 @@ public:
 private slots:
     void on_b_back_clicked();
 
-    void on_pushButton_clicked();
-
     void on_b_viewclasament_clicked();
+
+    void on_b_afisaticlasamentul_clicked();
 
 private:
     Ui::Clasament *ui;
     MainWindow *mn;
     ViewClasament *vc;
+    ViewClasamentSportivi *vcs;
     QSqlDatabase m_db;
     void GetCategoriiVarsta();
     void GetCategoriiGreutate();

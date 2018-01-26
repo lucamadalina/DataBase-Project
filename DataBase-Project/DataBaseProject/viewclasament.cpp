@@ -4,6 +4,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QDialog>
+#include "clasament.h"
 
 ViewClasament::ViewClasament(QWidget *parent) :
     QDialog(parent),
@@ -25,6 +26,7 @@ ViewClasament::ViewClasament(QWidget *parent) :
             ui->tableWidget->setItem(i, 1, newItem);
 
     }
+
 }
 
 ViewClasament::~ViewClasament()
@@ -80,4 +82,12 @@ std::vector<ClasamentOrganizatii> ViewClasament::setOrdaring(std::vector<Clasame
         }
     }
     return list;
+}
+
+void ViewClasament::on_b_backToClasament_clicked()
+{
+    Clasament c;
+    this->hide();
+    c.setModal(true);
+    c.exec();
 }

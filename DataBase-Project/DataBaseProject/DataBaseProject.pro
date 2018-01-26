@@ -49,7 +49,8 @@ SOURCES += \
     addclubsportiv.cpp \
     clasamentorganizatii.cpp \
     clasamentorganizatii.cpp \
-    viewclasament.cpp
+    viewclasament.cpp \
+    viewclasamentsportivi.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -76,7 +77,8 @@ HEADERS += \
     addclubsportiv.h \
     clasamentorganizatii.h \
     clasamentorganizatii.h \
-    viewclasament.h
+    viewclasament.h \
+    viewclasamentsportivi.h
 
 FORMS += \
         mainwindow.ui \
@@ -88,7 +90,8 @@ FORMS += \
     addcategoriegreutate.ui \
     addcategorievarsta.ui \
     addclubsportiv.ui \
-    viewclasament.ui
+    viewclasament.ui \
+    viewclasamentsportivi.ui
 
 
 RESOURCES += \

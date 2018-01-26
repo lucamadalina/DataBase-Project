@@ -6,7 +6,7 @@
 #include<QSqlDatabase>
 #include "clasamentorganizatii.h"
 #include "qtablewidget.h"
-
+#include <QtCharts/qpieseries.h>
 namespace Ui {
 class ViewClasament;
 }
@@ -21,6 +21,9 @@ public:
     std::vector<ClasamentOrganizatii> getClasament();
     QString getNumeOrganizatie(int id);
     std::vector<ClasamentOrganizatii> setOrdaring(std::vector<ClasamentOrganizatii> list);
+
+private slots:
+    void on_b_backToClasament_clicked();
 
 private:
     Ui::ViewClasament *ui;
