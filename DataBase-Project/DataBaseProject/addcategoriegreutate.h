@@ -22,8 +22,6 @@ private slots:
 
     void on_b_back_clicked();
 
-    void on_home_clicked();
-
 private:
     Ui::addcategoriegreutate *ui;
     CategorieGreutateDao categorieGreutateDao;

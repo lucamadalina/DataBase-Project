@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>311</width>
-    <height>294</height>
+    <width>349</width>
+    <height>291</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,124 +17,109 @@
    <string notr="true">
 background-color: rgb(170, 170, 127);</string>
   </property>
-  <widget class="QTextEdit" name="prag_min">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>80</y>
-     <width>201</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(247, 247, 182);</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="prag_max">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>130</y>
-     <width>201</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(247, 247, 182);</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>60</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Prag Minim</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>110</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Prag Maxim</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="b_adCategorie">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>180</y>
-     <width>101</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(247, 247, 182);</string>
-   </property>
-   <property name="text">
-    <string>Adauga</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="home">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>10</y>
-     <width>41</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(247, 247, 182);</string>
-   </property>
-   <property name="text">
-    <string>Home</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="b_back">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>41</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(247, 247, 182);</string>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>10</y>
-     <width>171</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-font: 10pt &quot;MS Sans Serif&quot;;
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;Adobe Caslon Pro Bold&quot;;
 </string>
-   </property>
-   <property name="text">
-    <string>Adauga Gategorie Greutate</string>
-   </property>
-  </widget>
+     </property>
+     <property name="text">
+      <string>Adauga Gategorie Greutate</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="b_back">
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Prag Minim</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="prag_min">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Prag Maxim</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="prag_max">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QPushButton" name="b_adCategorie">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+     <property name="text">
+      <string>Adauga</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

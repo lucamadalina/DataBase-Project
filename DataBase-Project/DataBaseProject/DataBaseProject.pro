@@ -160,7 +160,6 @@ FORMS += \
     addsportiv.ui \
     administrarecompetitiepage.ui \
     afisarestatisticipage.ui \
-    campionat.ui \
     clasament.ui \
     mainwindow.ui \
     simularelupte.ui \

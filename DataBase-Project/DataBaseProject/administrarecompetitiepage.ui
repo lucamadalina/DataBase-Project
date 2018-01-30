@@ -17,87 +17,107 @@
    <string notr="true">
 background-color: rgb(170, 170, 127);</string>
   </property>
-  <widget class="QPushButton" name="b_back">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>51</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgba(200, 200, 200, 200);</string>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>50</y>
-     <width>150</width>
-     <height>231</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPushButton" name="b_adCatGreutate">
-      <property name="styleSheet">
-       <string notr="true">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="b_back">
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="b_adCatGreutate">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
 background-color: rgb(247, 247, 182);</string>
-      </property>
-      <property name="text">
-       <string>Adaugare categorie greutate</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="b_adCatVarsta">
-      <property name="styleSheet">
-       <string notr="true">
+     </property>
+     <property name="text">
+      <string>Adaugare categorie greutate</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="b_adCatVarsta">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
 background-color: rgb(247, 247, 182);</string>
-      </property>
-      <property name="text">
-       <string>Adaugare categorie varsta</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="b_adClubSportiv">
-      <property name="styleSheet">
-       <string notr="true">
+     </property>
+     <property name="text">
+      <string>Adaugare categorie varsta</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="b_adClubSportiv">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
 background-color: rgb(247, 247, 182);</string>
-      </property>
-      <property name="text">
-       <string>Adaugare club sportiv</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="b_adSportiv">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(247, 247, 182);</string>
-      </property>
-      <property name="text">
-       <string>Adaugare sportiv</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="b_simulareLupte">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(247, 247, 182);</string>
-      </property>
-      <property name="text">
-       <string>Simulare Lupte</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+     </property>
+     <property name="text">
+      <string>Adaugare club sportiv</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="b_adSportiv">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+     <property name="text">
+      <string>Adaugare sportiv</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="b_simulareLupte">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(247, 247, 182);</string>
+     </property>
+     <property name="text">
+      <string>Simulare Lupte</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
