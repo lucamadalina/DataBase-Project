@@ -1,6 +1,7 @@
 #include "addsportiv.h"
 #include "ui_addsportiv.h"
 #include "administrarecompetitiepage.h"
+#include <QMessageBox>
 class SportivDao;
 
 addSportiv::addSportiv(QWidget *parent) :
@@ -36,11 +37,23 @@ void addSportiv::on_b_adSportiv_clicked()
        int greutate = ui->greutate->toPlainText().toInt(&ok);
        int id_club = ui->id_club->currentText().split(".").value(0).toInt(&ok);
        Sportiv sportiv(nume, prenume, cnp, varsta, greutate,tara, gen, id_club);
-       if(!ok)
+       if(!ok || !nume[0].isLetter() || varsta < 5 || varsta > 100 || greutate < 1 || greutate > 150 || !prenume[0].isLetter())
        {
-           //QMessageBox::warning(this, tr("Error"), tr("id, varsta, greutate, id_club trebuie sa fie numere"));
+           QMessageBox::warning(this, tr("WARNING"), tr("Valorile caracteristicilor pentru un sportiv trebuie sa fie corecte si "
+                                                        ""
+                                                        "varsta trebuie sa fie cuprinsa in intervalul 5-100 si "
+                                                        "greutatea trebuie sa fie cuprinsa in intervalul 1-150"));
+           ui->nume->clear();
+           ui->prenume->clear();
+           ui->tara->clear();
+           ui->gen->clear();
+           ui->cnp->clear();
+           ui->varsta->clear();
+           ui->greutate->clear();
+           ui->id_club->clear();
 
        } else {
+           QMessageBox::information(this, tr("INFORMATION"), tr("Adaugare sportiv reusita !"));
            sportivDao.AddSportiv(sportiv);
            on_b_back_clicked();
        }

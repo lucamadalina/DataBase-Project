@@ -2,6 +2,7 @@
 #include "ui_AddCompetitie.h"
 #include "campionat.h"
 #include<QDir>
+#include <QMessageBox>
 
 class CampionatDao;
 
@@ -36,9 +37,20 @@ void AddCompetitie::on_Add_competitie_clicked()
 
     Campionat competitie(denumire, puncteParticipare, locatie, puncteRunda1, puncteSemiFinala, puncteFinala);
 
-    if(ok){
-      campionatDao.AddCampionat(competitie);
-    }else{
-
+    if(!ok || !denumire[0].isLetter() || !locatie[0].isLetter())
+    {
+        QMessageBox::warning(this, tr("WARNING"), tr("Adaugare competitie nereusita pentru ca "
+                                                     "denumirea si locatia trebuie sa inceapa cu litera iar"
+                                                     "celelalte caracteristici ale competitiei trebuie sa fie numere intregi"));
+        ui->denumire->clear();
+        ui->locatie->clear();
+        ui->puncte_participare->clear();
+        ui->puncte_runda1->clear();
+        ui->puncte_semifinala->clear();
+        ui->puncte_finala->clear();
     }
+    else{
+        QMessageBox::information(this, tr("INFORMATION"), tr("Adaugare competitie reusita !"));
+        campionatDao.AddCampionat(competitie);
+ }
 }
