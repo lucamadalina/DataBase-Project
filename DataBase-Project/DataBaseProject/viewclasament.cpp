@@ -5,7 +5,7 @@
 #include <QSqlQuery>
 #include <QDialog>
 #include "clasament.h"
-
+#include "afisarestatisticipage.h"
 ViewClasament::ViewClasament(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ViewClasament)
@@ -17,6 +17,7 @@ ViewClasament::ViewClasament(QWidget *parent) :
     ui->tableWidget->setHorizontalHeaderLabels(QString("Denumire;Punctaj;").split(";"));
     ui->tableWidget->resize(600,600);
     int i;
+    int j;
     QTableWidgetItem *newItem;
     for(i=0; i<finalList.size(); i++){
             newItem = new QTableWidgetItem(getNumeOrganizatie(finalList[i].getIdOrganizatie()));
@@ -89,4 +90,12 @@ void ViewClasament::on_b_backToClasament_clicked()
     this->hide();
     c.setModal(true);
     c.exec();
+}
+
+void ViewClasament::on_b_afisareStatistici_clicked()
+{
+    AfisareStatisticiPage as;
+    this->hide();
+    as.setModal(true);
+    as.exec();
 }

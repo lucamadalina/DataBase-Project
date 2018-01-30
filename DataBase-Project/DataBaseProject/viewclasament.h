@@ -6,7 +6,6 @@
 #include<QSqlDatabase>
 #include "clasamentorganizatii.h"
 #include "qtablewidget.h"
-#include <QtCharts/qpieseries.h>
 namespace Ui {
 class ViewClasament;
 }
@@ -24,6 +23,8 @@ public:
 
 private slots:
     void on_b_backToClasament_clicked();
+
+    void on_b_afisareStatistici_clicked();
 
 private:
     Ui::ViewClasament *ui;

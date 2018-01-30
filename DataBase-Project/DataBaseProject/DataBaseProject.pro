@@ -51,7 +51,36 @@ SOURCES += \
     clasamentorganizatii.cpp \
     viewclasament.cpp \
     viewclasamentsportivi.cpp \
-    simularelupte.cpp
+    simularelupte.cpp \
+    afisarestatisticipage.cpp \
+    addcategoriegreutate.cpp \
+    addcategorievarsta.cpp \
+    addclubsportiv.cpp \
+    addcompetitie.cpp \
+    addsportiv.cpp \
+    administrarecompetitiepage.cpp \
+    afisarestatisticipage.cpp \
+    campionat.cpp \
+    campionatdao.cpp \
+    categoriegen.cpp \
+    categoriegendao.cpp \
+    categoriegreutate.cpp \
+    categoriegreutatedao.cpp \
+    categorievarsta.cpp \
+    categorievarstadao.cpp \
+    clasament.cpp \
+    clasamentorganizatii.cpp \
+    clasamentsportivi.cpp \
+    clubsportiv.cpp \
+    clubsportivdao.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    piechartwidget.cpp \
+    simularelupte.cpp \
+    sportiv.cpp \
+    sportivdao.cpp \
+    viewclasament.cpp \
+    viewclasamentsportivi.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -80,7 +109,35 @@ HEADERS += \
     clasamentorganizatii.h \
     viewclasament.h \
     viewclasamentsportivi.h \
-    simularelupte.h
+    simularelupte.h \
+    administrarecompetitiepage.h \
+    addcategoriegreutate.h \
+    addcategorievarsta.h \
+    addclubsportiv.h \
+    AddCompetitie.h \
+    addsportiv.h \
+    administrarecompetitiepage.h \
+    afisarestatisticipage.h \
+    campionat.h \
+    campionatdao.h \
+    categoriegen.h \
+    categoriegendao.h \
+    categoriegreutate.h \
+    categoriegreutatedao.h \
+    categorievarsta.h \
+    categorievarstadao.h \
+    clasament.h \
+    clasamentorganizatii.h \
+    clasamentsportivi.h \
+    clubsportiv.h \
+    clubsportivdao.h \
+    mainwindow.h \
+    piechartwidget.h \
+    simularelupte.h \
+    sportiv.h \
+    sportivdao.h \
+    viewclasament.h \
+    viewclasamentsportivi.h
 
 FORMS += \
         mainwindow.ui \
@@ -94,7 +151,21 @@ FORMS += \
     addclubsportiv.ui \
     viewclasament.ui \
     viewclasamentsportivi.ui \
-    simularelupte.ui
+    simularelupte.ui \
+    afisarestatisticipage.ui \
+    addcategoriegreutate.ui \
+    addcategorievarsta.ui \
+    addclubsportiv.ui \
+    AddCompetitie.ui \
+    addsportiv.ui \
+    administrarecompetitiepage.ui \
+    afisarestatisticipage.ui \
+    campionat.ui \
+    clasament.ui \
+    mainwindow.ui \
+    simularelupte.ui \
+    viewclasament.ui \
+    viewclasamentsportivi.ui
 
 
 RESOURCES += \
@@ -102,7 +173,8 @@ RESOURCES += \
     p1.jpg \
     p6.jpg \
     p7.jpg \
-    p8.jpg
+    p8.jpg \
+    images.qrc
 
 DISTFILES += \
     p1.jpg \
@@ -119,4 +191,21 @@ DISTFILES += \
     P9.jpg \
     P10.jpg \
     P12.jpg \
+    P11.png \
+    DataBaseProject.pro.user \
+    p1.jpg \
+    p2.jpg \
+    p3.jpg \
+    p4.jpg \
+    p5.jpg \
+    p6.jpg \
+    p7.jpg \
+    p8.jpg \
+    P9.jpg \
+    P10.jpg \
+    P12.jpg \
+    podium-1.jpg \
     P11.png
+
+SUBDIRS += \
+    DataBaseProject.pro
