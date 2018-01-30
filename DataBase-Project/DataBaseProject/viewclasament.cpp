@@ -26,6 +26,8 @@ ViewClasament::ViewClasament(QWidget *parent) :
             ui->tableWidget->setItem(i, 1, newItem);
 
     }
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
 
 }
 

@@ -39,12 +39,20 @@ void SportivDao::AddSportiv(Sportiv& sportiv)
             {
                //QMessageBox::warning(this, tr("Eroare"), tr("varsta, greutate, id_club trebuie sa fie de tip int"));
             }
+            int id;
+            query.prepare("select id from sportiv where cnp = (:cnp)");
+            query.bindValue(":cnp", sportiv.getCNP());
+            ok = query.exec();
+            if(query.next()){
+                id = query.value(0).toInt();
+            }
             int nr = 0;
             QString values = "INSERT INTO clasament_sportiv(id_sportiv, numar_puncte, id_varsta_greutate_gen)\
-            values("+QString::number(sportiv.getId())+", "+QString::number(nr)+", "+QString::number(id_varsta_greutate_gen)+")";
+                        values("+QString::number(id)+", "+QString::number(nr)+", "+QString::number(id_varsta_greutate_gen)+")";
             query.prepare("INSERT INTO clasament_sportiv(id_sportiv, numar_puncte, \
-                           id_varsta_greutate_gen) values(:id_sportiv,:numar_puncte,:id_varsta_greutate_gen");
+                                       id_varsta_greutate_gen) values(:id_sportiv,:numar_puncte,:id_varsta_greutate_gen");
             query.exec(values);
+
  }
 int SportivDao::calculateIdCategorieGen(QString gen){
      m_db = mw->getDataBase();

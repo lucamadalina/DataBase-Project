@@ -21,6 +21,8 @@ ViewClasamentSportivi::ViewClasamentSportivi(QWidget *parent) :
             ui->tableWidget_1->setItem(i, 1, newItem);
 
     }
+    ui->tableWidget_1->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableWidget_1->setSelectionBehavior(QAbstractItemView::SelectRows);
 
 }
 

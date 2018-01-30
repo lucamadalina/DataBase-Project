@@ -30,6 +30,8 @@ private slots:
     void on_p_Clasament_clicked();
     void on_p_AdCampionat_clicked();
 
+    void on_b_close_clicked();
+
 private:
     Ui::MainWindow *ui;
 

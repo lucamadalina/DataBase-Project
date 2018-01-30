@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>521</width>
-    <height>334</height>
+    <width>414</width>
+    <height>344</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,71 +23,112 @@
    <property name="enabled">
     <bool>true</bool>
    </property>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>130</y>
-      <width>331</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="p_AdCompetitie">
-       <property name="styleSheet">
-        <string notr="true">font: 75 14pt &quot;Arial&quot;;
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="b_close">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>75</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(243, 243, 182);
+font: 75 14pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Close</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="picture">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>5000</width>
+        <height>2000</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="p_AdCompetitie">
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Arial&quot;;
 background-color: rgb(243, 243, 182);
 </string>
-       </property>
-       <property name="text">
-        <string>Administrare Competitie</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="p_AdCampionat">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 75 14pt &quot;Arial&quot;;
+        </property>
+        <property name="text">
+         <string>Administrare Competitie</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="p_AdCampionat">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 14pt &quot;Arial&quot;;
 background-color: rgb(243, 243, 182);</string>
-       </property>
-       <property name="text">
-        <string>Adaugare Competitie</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="p_Clasament">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(243, 243, 182);
+        </property>
+        <property name="text">
+         <string>Adaugare Competitie</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="p_Clasament">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(243, 243, 182);
 font: 75 14pt &quot;Arial&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Clasament</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLabel" name="picture">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>421</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
+        </property>
+        <property name="text">
+         <string>Clasament</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>

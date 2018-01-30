@@ -96,3 +96,8 @@ void MainWindow::on_p_AdCampionat_clicked()
      return m_db;
   }
 
+
+void MainWindow::on_b_close_clicked()
+{
+    close();
+}
