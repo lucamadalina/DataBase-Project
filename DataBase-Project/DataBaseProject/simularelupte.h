@@ -7,6 +7,8 @@
 #include "mainwindow.h"
 #include "sportivdao.h"
 #include "sportiv.h"
+#include "administrarecompetitiepage.h"
+
 namespace Ui {
 class simularelupte;
 }
@@ -27,6 +29,8 @@ private slots:
     void setPuncte(QList<Sportiv> list, QString denumire);
     void setPuncteOrganizatie(int puncte, int idOrganizatie);
 
+    void on_b_back_clicked();
+
 private:
     Ui::simularelupte *ui;
     MainWindow* mw;
@@ -38,6 +42,7 @@ private:
 //    QString gen;
     SportivDao sportivDao;
     QList<Sportiv> listaSportivi;
+    AdministrareCompetitiePage pag;
 };
 
 #endif // SIMULARELUPTE_H

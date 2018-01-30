@@ -53,9 +53,23 @@ void addSportiv::on_b_adSportiv_clicked()
            ui->id_club->clear();
 
        } else {
-           QMessageBox::information(this, tr("INFORMATION"), tr("Adaugare sportiv reusita !"));
-           sportivDao.AddSportiv(sportiv);
-           on_b_back_clicked();
+
+           int ok = sportivDao.AddSportiv(sportiv);
+            if(ok == 1){
+                QMessageBox::information(this, tr("INFORMATION"), tr("Adaugare sportiv reusita !"));
+                on_b_back_clicked();
+            } else {
+                QMessageBox::warning(this, tr("WARNING"), tr("Eroare inserare"));
+                ui->nume->clear();
+                ui->prenume->clear();
+                ui->tara->clear();
+                ui->gen->clear();
+                ui->cnp->clear();
+                ui->varsta->clear();
+                ui->greutate->clear();
+                ui->id_club->clear();
+            }
+
        }
 }
 

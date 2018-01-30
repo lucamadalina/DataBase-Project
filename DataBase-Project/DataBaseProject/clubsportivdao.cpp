@@ -28,10 +28,22 @@ void ClubSportivDao::AddClubSportiv(ClubSportiv& clubSportiv)
     if(ok == 0)
     {
        //QMessageBox::warning(this, tr("Eroare"), tr("id, varsta, greutate, id_club trebuie sa fie de tip int"));
+    } else {
+        query.prepare("select id from club_sportiv where denumire = (:denumire)");
+        query.bindValue(":denumire", denumire);
+        query.exec();
+        int id_club;
+        if(query.next()){
+            id_club = query.value(0).toInt();
+        }
+        query.prepare("insert into clasament_organizatii(id_organizatie, numar_puncte) values (:id, :numar_puncte)");
+        values = "INSERT INTO clasament_organizatii(id_organizatie, numar_puncte) values("+
+                QString::number(id_club)+","+QString::number(0) +")";
+        ok = query.exec(values);
+        if(ok == 0){
+
+        }
     }
-
-
-
 }
 
 

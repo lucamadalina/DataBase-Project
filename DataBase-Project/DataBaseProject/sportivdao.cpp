@@ -17,7 +17,7 @@ void SportivDao::existTable()
 {
 }
 
-void SportivDao::AddSportiv(Sportiv& sportiv)
+int SportivDao::AddSportiv(Sportiv& sportiv)
 {
     int idCatGen = calculateIdCategorieGen(sportiv.getGen());
     int idCatGreutate = calculateIdCategorieGreutate(sportiv.getGreutate());
@@ -26,32 +26,41 @@ void SportivDao::AddSportiv(Sportiv& sportiv)
     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
 
-    QString text = "INSERT INTO sportiv(nume, prenume, cnp, varsta, greutate, tara, gen,\
-            id_varsta_greutate_gen,id_club) values('" +sportiv.getNume()+"','"+sportiv.getPrenume()+"',"+QString::number(sportiv.getCNP())
-         +", "+QString::number(sportiv.getVarsta()) + ", "+QString::number(sportiv.getGreutate())+",'"
-        + sportiv.getTara()+"', '"+sportiv.getGen()+"', "+ QString::number(sportiv.getIdClubSportiv())
-          +", "+ QString::number(id_varsta_greutate_gen)+")";
-    query.prepare("INSERT INTO sportiv(nume, prenume, cnp, varsta, greutate, tara, gen, id_club,\
-                  id_varsta_greutate_gen) values( :nume, :prenume, :cnp, :varsta, \
-                :greutate, :tara, :gen, :id_club, :id_varsta_greutate_gen)");
+//    QString text1 = "INSERT INTO sportiv(nume, prenume,cnp, varsta, greutate, tara, gen,";
+//        QString text2 = "id_varsta_greutate_gen,id_club) values('" ;
+//        QString text3 = sportiv.getNume()+"','"+sportiv.getPrenume()+"', "+QString::number(sportiv.getCNP())+", "+QString::number(sportiv.getVarsta());
+//        QString text4= ", "+QString::number(sportiv.getGreutate())+",'" + sportiv.getTara()+"', '"+sportiv.getGen();
+//        QString text5="', "+ QString::number(sportiv.getIdClubSportiv()) +", "+ QString::number(id_varsta_greutate_gen)+")";
+    //QString total = text1+text2+text3+text4+text5;
+
+        QString text = "INSERT INTO sportiv(nume, prenume, cnp, varsta, greutate, tara, gen,\
+        id_varsta_greutate_gen,id_club) values('" +sportiv.getNume()+"','"+sportiv.getPrenume()+"',"+QString::number(sportiv.getCNP())
+        +", "+QString::number(sportiv.getVarsta()) + ", "+QString::number(sportiv.getGreutate())+",'"
+        + sportiv.getTara()+"', '"+sportiv.getGen()+"', "+ QString::number(id_varsta_greutate_gen)
+        +", "+ QString::number(sportiv.getIdClubSportiv())+")";
+        query.prepare("INSERT INTO sportiv(nume, prenume, cnp, varsta, greutate, tara, gen, id_club,\
+        id_varsta_greutate_gen) values( :nume, :prenume, :cnp, :varsta, \
+        :greutate, :tara, :gen, :id_club, :id_varsta_greutate_gen)");
             int ok = query.exec(text);
             if(ok == 0)
             {
-               //QMessageBox::warning(this, tr("Eroare"), tr("varsta, greutate, id_club trebuie sa fie de tip int"));
+                return 0;
+            } else {
+                int id;
+                query.prepare("select id from sportiv where cnp = (:cnp)");
+                query.bindValue(":cnp", sportiv.getCNP());
+                ok = query.exec();
+                if(query.next()){
+                    id = query.value(0).toInt();
+                }
+                int nr = 0;
+                QString values = "INSERT INTO clasament_sportiv(id_sportiv, numar_puncte, id_varsta_greutate_gen)\
+                            values("+QString::number(id)+", "+QString::number(nr)+", "+QString::number(id_varsta_greutate_gen)+")";
+                query.prepare("INSERT INTO clasament_sportiv(id_sportiv, numar_puncte, \
+                                           id_varsta_greutate_gen) values(:id_sportiv,:numar_puncte,:id_varsta_greutate_gen");
+                query.exec(values);
             }
-            int id;
-            query.prepare("select id from sportiv where cnp = (:cnp)");
-            query.bindValue(":cnp", sportiv.getCNP());
-            ok = query.exec();
-            if(query.next()){
-                id = query.value(0).toInt();
-            }
-            int nr = 0;
-            QString values = "INSERT INTO clasament_sportiv(id_sportiv, numar_puncte, id_varsta_greutate_gen)\
-                        values("+QString::number(id)+", "+QString::number(nr)+", "+QString::number(id_varsta_greutate_gen)+")";
-            query.prepare("INSERT INTO clasament_sportiv(id_sportiv, numar_puncte, \
-                                       id_varsta_greutate_gen) values(:id_sportiv,:numar_puncte,:id_varsta_greutate_gen");
-            query.exec(values);
+       return 1;
 
  }
 int SportivDao::calculateIdCategorieGen(QString gen){

@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QTimer>
 #include <campionat.h>
+#include <random>
 
 simularelupte::simularelupte(QWidget *parent) :
     QDialog(parent),
@@ -96,7 +97,6 @@ void simularelupte::execute(QString competitie){
             } else {
                 text = text + "Competitia la aceasta categorie s-a desfasurat" +"\n";
                 ui->textEdit_2->setText(text);
-
                 setPuncte(listaSportivi, competitie);
 
             }
@@ -121,63 +121,72 @@ void simularelupte::setPuncte(QList<Sportiv> lista, QString competitie)
                ps= query.value("puncte_semifinala").toInt();
                pf = query.value("puncte_finala").toInt();
     }
-    Campionat campionat(id, denumire, pp, locatie, pr1,
-                         ps, pf);
-    QString text;
-
-    text = text + "Sportivi care au pierdut in runda 1" +"\n";
-    for(int k=0; k<8; k++){
+    Campionat campionat(id, denumire, pp, locatie, pr1, ps, pf);
+    QString text = competitie + "\n";
+    int count;
+    int numarElemente = lista.size();
+    text = text + "Sportivi care au pierdut in prima runda:" +"\n";
+    for(int k=0; k<4; k++){
+        count = rand()%((0 - numarElemente) + 1);
         query.prepare("UPDATE clasament_sportiv\
                       SET numar_puncte = numar_puncte + (:numar)\
                       WHERE id_sportiv = (:id)");
          query.bindValue(":numar", campionat.getPuncteParticipare());
-         query.bindValue(":id", lista[k].getId());
+         query.bindValue(":id", lista[count].getId());
          query.exec();
-         setPuncteOrganizatie(campionat.getPuncteParticipare(), lista[k].getIdClubSportiv());
-         text = text + lista[k].getNume() + " " + lista[k].getPrenume() + "\n";
+         setPuncteOrganizatie(campionat.getPuncteParticipare(), lista[count].getIdClubSportiv());
+         text = text + lista[count].getNume() + " " + lista[count].getPrenume()+" " + QString::number(campionat.getPuncteParticipare()) + " puncte \n";
          ui->textEdit_3->setText(text);
          ui->textEdit_3->setReadOnly(true);
+        lista.removeAt(count);
+        numarElemente--;
     }
-     text = text + "Sportivi care au pierdut in runda 2" +"\n";
-    for(int k=8; k<12; k++){
+     text = text + "Sportivi care au pierdut in a doua runda:" +"\n";
+    for(int k=0; k<2; k++){
+        count = rand()%((0 - numarElemente) + 1);
         query.prepare("UPDATE clasament_sportiv\
                       SET numar_puncte = numar_puncte + (:numar)\
                       WHERE id_sportiv = (:id)");
          query.bindValue(":numar", campionat.getPuncteRunda1());
-         query.bindValue(":id", lista[k].getId());
+         query.bindValue(":id", lista[count].getId());
          query.exec();
-         setPuncteOrganizatie(campionat.getPuncteRunda1(), lista[k].getIdClubSportiv());
-         text = text + lista[k].getNume() + " " + lista[k].getPrenume() + "\n";
+         setPuncteOrganizatie(campionat.getPuncteRunda1(), lista[count].getIdClubSportiv());
+         text = text + lista[count].getNume() + " " + lista[count].getPrenume()+" " + QString::number(campionat.getPuncteRunda1()) + " puncte \n";
          ui->textEdit_3->setText(text);
          ui->textEdit_3->setReadOnly(true);
+         lista.removeAt(count);
+         numarElemente--;
     }
-     text = text + "Sportivi care au pierdut in semifinala" +"\n";
-    for(int k=12; k<14; k++){
+
+     text = text + "Finalist:" +"\n";
+      count = rand()%((0 - numarElemente) + 1);
         query.prepare("UPDATE clasament_sportiv\
                       SET numar_puncte = numar_puncte +(:numar)\
                       WHERE id_sportiv = (:id)");
          query.bindValue(":numar", campionat.getPuncteSemiFinala());
-         query.bindValue(":id", lista[k].getId());
+         query.bindValue(":id", lista[count].getId());
          query.exec();
-         setPuncteOrganizatie(campionat.getPuncteSemiFinala(), lista[k].getIdClubSportiv());
-         text = text + lista[k].getNume() + " " + lista[k].getPrenume() + "\n";
+         setPuncteOrganizatie(campionat.getPuncteSemiFinala(), lista[count].getIdClubSportiv());
+         text = text + lista[count].getNume() + " " + lista[count].getPrenume()+" "+ QString::number(campionat.getPuncteSemiFinala()) + " puncte \n";
          ui->textEdit_3->setText(text);
          ui->textEdit_3->setReadOnly(true);
-    }
-     text = text + "Sportivi care au pierdut in finala" +"\n";
-    for(int k=14; k<16; k++){
-        query.prepare("UPDATE clasament_sportiv\
+         lista.removeAt(0);
+         numarElemente--;
+
+     text = text + "Castigator:" +"\n";
+     count = rand()%((0 - numarElemente) + 1);
+     query.prepare("UPDATE clasament_sportiv\
                       SET numar_puncte = numar_puncte + (:numar)\
                       WHERE id_sportiv = (:id)");
-         query.bindValue(":numar", campionat.getPuncteFinala());
-         query.bindValue(":id", lista[k].getId());
-         query.exec();
-         setPuncteOrganizatie(campionat.getPuncteFinala(), lista[k].getIdClubSportiv());
-         text = text + lista[k].getNume() + " " + lista[k].getPrenume() + "\n";
-         ui->textEdit_3->setText(text);
-         ui->textEdit_3->setReadOnly(true);
-    }
-
+     query.bindValue(":numar", campionat.getPuncteFinala());
+     query.bindValue(":id", lista[0].getId());
+     query.exec();
+     setPuncteOrganizatie(campionat.getPuncteFinala(), lista[count].getIdClubSportiv());
+     text = text + lista[count].getNume() + " " + lista[count].getPrenume()+" "  + QString::number(campionat.getPuncteFinala()) + " puncte \n";
+      ui->textEdit_3->setText(text);
+     ui->textEdit_3->setReadOnly(true);
+     lista.removeAt(count);
+     numarElemente--;
 }
 
 void simularelupte::setPuncteOrganizatie(int puncte, int idOrganizatie)
@@ -196,3 +205,11 @@ void simularelupte::setPuncteOrganizatie(int puncte, int idOrganizatie)
 }
 
 
+
+void simularelupte::on_b_back_clicked()
+{
+    AdministrareCompetitiePage as;
+    this->hide();
+    as.setModal(true);
+    as.exec();
+}

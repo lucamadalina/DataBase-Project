@@ -15,7 +15,7 @@ public:
     SportivDao();
     //SportivDao(QSqlDatabase &m_db);
     void existTable();
-    void AddSportiv(Sportiv& sportiv);
+    int AddSportiv(Sportiv& sportiv);
     void RemoveSportiv(int id);
     int calculateIdCategorieGreutate(int greutate);
     int calculateIdCategorieVarsta(int varsta);
