@@ -18,17 +18,16 @@ void CategorieGreutateDao::AddCategorieGreutate(CategorieGreutate& categorieGreu
 {
 
     m_db = mw->getDataBase();
-    int id = categorieGreutate.getId();
     int prag_min = categorieGreutate.getPragMin();
     int prag_max = categorieGreutate.getPragMax();
-    QString values = "INSERT INTO categorie_greutate values("+QString::number(id)+", "+QString::number(prag_min)+", "+QString::number(prag_max)+")";
+    QString values = "INSERT INTO categorie_greutate(prag_min, prag_max) values("+QString::number(prag_min)+", "+QString::number(prag_max)+")";
     QSqlQuery query(m_db);
-        query.prepare("INSERT INTO categorie_greutate values(:id, :prag_min, prag_max");
+        query.prepare("INSERT INTO categorie_greutate values(:prag_min, prag_max");
 
             int ok = query.exec(values);
             if(ok == 0)
             {
-               //QMessageBox::warning(this, tr("Eroare"), tr("id, varsta, greutate, id_club trebuie sa fie de tip int"));
+               //QMessageBox::warning(this, tr("Eroare"), tr("varsta, greutate, id_club trebuie sa fie de tip int"));
             }
 }
 
@@ -49,13 +48,11 @@ std::vector<CategorieGreutate> CategorieGreutateDao::getCategoriiGreutate()
 
     std::vector<CategorieGreutate> list;
     while(query.next()) {
-
         int id = query.value("id").toInt();
         int prag_min = query.value("prag_min").toInt();
         int prag_max = query.value("prag_max").toInt();
         CategorieGreutate cg(id, prag_min, prag_max);
          list.push_back(cg);
     }
-
     return list;
 }

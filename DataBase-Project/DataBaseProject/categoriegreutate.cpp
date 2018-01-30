@@ -9,6 +9,12 @@ CategorieGreutate::CategorieGreutate(int id, int prag_min, int prag_max){
     this->prag_min = prag_min;
     this->prag_max = prag_max;
 }
+
+CategorieGreutate::CategorieGreutate(int prag_min, int prag_max)
+{
+    this->prag_min = prag_min;
+    this->prag_max = prag_max;
+}
 int CategorieGreutate::getId(){
     return this->id;
 }

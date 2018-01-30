@@ -28,19 +28,11 @@ void addClubSportiv::on_b_back_clicked()
 
 void addClubSportiv::on_b_addClubSportiv_clicked()
 {
-    bool ok;
-    int id = ui->id->toPlainText().toInt(&ok);
     QString denumire = ui->denumire->toPlainText();
     QString tara = ui->tara->toPlainText();
     QString adresa = ui->adresa->toPlainText();
-
-    ClubSportiv cs(id, denumire, tara, adresa);
-
-    if(ok){
-      clubSportivDao.AddClubSportiv(cs);
-    }else{
-
-    }
+    ClubSportiv cs(denumire, tara, adresa);
+    clubSportivDao.AddClubSportiv(cs);
     on_b_back_clicked();
 
 }

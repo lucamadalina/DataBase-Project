@@ -5,6 +5,7 @@
 #include<sportiv.h>
 #include<sportivdao.h>
 #include"administrarecompetitiepage.h"
+#include "clubsportivdao.h"
 namespace Ui {
 class addSportiv;
 }
@@ -27,6 +28,7 @@ private:
     SportivDao sportivDao;
     Sportiv *sportiv;
     AdministrareCompetitiePage * adComPage;
+    ClubSportivDao cs;
 };
 
 #endif // ADDSPORTIV_H

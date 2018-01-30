@@ -6,7 +6,6 @@
 #include <QSqlRelationalTableModel>
 #include <QSqlQueryModel>
 #include <QSqlDatabase>
-
 namespace Ui {
 class MainWindow;
 }
@@ -30,7 +29,6 @@ private slots:
     void on_p_AdCompetitie_clicked();
     void on_p_Clasament_clicked();
     void on_p_AdCampionat_clicked();
-
 
 private:
     Ui::MainWindow *ui;

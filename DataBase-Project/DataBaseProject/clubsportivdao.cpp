@@ -19,12 +19,11 @@ void ClubSportivDao::AddClubSportiv(ClubSportiv& clubSportiv)
 
     m_db = mw->getDataBase();
     QSqlQuery query(m_db);
-    query.prepare("INSERT INTO club_sportiv values(:id, :denumire, :tara, :adresa");
-    int id = clubSportiv.getId();
+    query.prepare("INSERT INTO club_sportiv values(:denumire, :tara, :adresa");
     QString denumire = clubSportiv.getDenumire();
     QString tara = clubSportiv.getTara();
     QString adresa = clubSportiv.getAdresa();
-    QString values = "INSERT INTO club_sportiv values("+QString::number(id)+", '"+denumire+"', '"+tara+"', '"+adresa+"')";
+    QString values = "INSERT INTO club_sportiv(denumire,tara, adresa) values('"+denumire+"', '"+tara+"', '"+adresa+"')";
     int ok = query.exec(values);
     if(ok == 0)
     {

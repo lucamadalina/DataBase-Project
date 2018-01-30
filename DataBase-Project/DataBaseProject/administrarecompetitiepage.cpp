@@ -5,6 +5,8 @@
 #include "addcategoriegreutate.h"
 #include "addcategorievarsta.h"
 #include "addclubsportiv.h"
+#include "simularelupte.h"
+
 AdministrareCompetitiePage::AdministrareCompetitiePage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AdministrareCompetitiePage)
@@ -57,4 +59,12 @@ void AdministrareCompetitiePage::on_b_adSportiv_clicked()
     pag.setModal(true);
     pag.exec();
 
+}
+
+void AdministrareCompetitiePage::on_b_simulareLupte_clicked()
+{
+    simularelupte sl;
+    this->hide();
+    sl.setModal(true);
+    sl.exec();
 }

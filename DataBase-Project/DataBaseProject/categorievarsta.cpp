@@ -9,6 +9,12 @@ CategorieVarsta::CategorieVarsta(int id, int prag_min, int prag_max){
     this->prag_min = prag_min;
     this->prag_max = prag_max;
 }
+
+CategorieVarsta::CategorieVarsta(int prag_min, int prag_max)
+{
+    this->prag_max = prag_max;
+    this->prag_min = prag_min;
+}
 int CategorieVarsta::getId(){
     return this->id;
 }

@@ -1,5 +1,9 @@
 #include "clasament.h"
 #include "ui_clasament.h"
+
+
+static std::vector<QString> listaCategorii;
+
 Clasament::Clasament(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Clasament)
@@ -35,19 +39,18 @@ void Clasament::GetCategoriiVarsta()
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM categorie_varsta");
     query.exec();
-    std::vector<QString> list_of_categorie_varsta;
+    QStringList list_of_categorie_varsta;
+    QString categorie_varsta;
+
     while(query.next())
     {
         QString id = query.value("id").toString();
         QString prag_min = query.value("prag_min").toString();
         QString prag_max = query.value("prag_max").toString();
-        list_of_categorie_varsta.push_back(id + ", " + prag_min + "-" + prag_max);
+        categorie_varsta = id+"."+prag_min+"-"+prag_max;
+        list_of_categorie_varsta = list_of_categorie_varsta + (QStringList()<<categorie_varsta);
     }
-    qSort(list_of_categorie_varsta.begin(), list_of_categorie_varsta.end());
-    for(std::vector<QString>::const_iterator i = list_of_categorie_varsta.begin(); i != list_of_categorie_varsta.end(); ++i)
-    {
-        ui->comboBox->addItem(*i);
-    }
+    ui->comboBox->addItems(list_of_categorie_varsta);
 }
 
 void Clasament::GetCategoriiGreutate()
@@ -55,19 +58,18 @@ void Clasament::GetCategoriiGreutate()
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM categorie_greutate");
     query.exec();
-    std::vector<QString> list_of_categorie_greutate;
+    QStringList list_of_categorie_greutate;
+    QString categorie_greutate;
+
     while(query.next())
     {
         QString id = query.value("id").toString();
         QString prag_min = query.value("prag_min").toString();
         QString prag_max = query.value("prag_max").toString();
-        list_of_categorie_greutate.push_back(id + ", "+ prag_min + "-" + prag_max);
+        categorie_greutate = id+"."+prag_min+"-"+prag_max;
+       list_of_categorie_greutate = list_of_categorie_greutate + (QStringList()<<categorie_greutate);
     }
-    qSort(list_of_categorie_greutate.begin(), list_of_categorie_greutate.end());
-    for(std::vector<QString>::const_iterator i = list_of_categorie_greutate.begin(); i != list_of_categorie_greutate.end(); ++i)
-    {
-        ui->comboBox_2->addItem(*i);
-    }
+    ui->comboBox_2->addItems(list_of_categorie_greutate);
 }
 
 void Clasament::GetCategoriiGen()
@@ -75,34 +77,41 @@ void Clasament::GetCategoriiGen()
     QSqlQuery query(m_db);
     query.prepare("SELECT * FROM categorie_gen");
     query.exec();
-    std::vector<QString> list_of_categorie_gen;
+    QStringList list_of_categorie_gen;
+    QString categorie_gen;
+
     while(query.next())
     {   QString id = query.value("id").toString();
         QString gen = query.value("gen").toString();
-        list_of_categorie_gen.push_back(id + "," + gen);
+        categorie_gen = id+"."+gen;
+        list_of_categorie_gen = list_of_categorie_gen + (QStringList()<<categorie_gen);
     }
-    for(std::vector<QString>::const_iterator i = list_of_categorie_gen.begin(); i != list_of_categorie_gen.end(); ++i)
-    {
-        ui->comboBox_3->addItem(*i);
-    }
+    ui->comboBox_3->addItems(list_of_categorie_gen);
 }
 
 void Clasament::on_b_afisaticlasamentul_clicked()
 {
+    listaCategorii = getCategoriiSelectate();
     vcs = new ViewClasamentSportivi();
     this->hide();
     vcs->show();
+
 }
 
-std::vector<QString> Clasament::GetMemberForAfisareClasament()
+std::vector<QString> Clasament::getCategoriiSelectate()
 {
-    std::vector<QString> lista_categoriilor_luptatorilor;
+    std::vector<QString> lista_categorii;
     QString interval_varsta = ui->comboBox->currentText();
     QString inveral_greutate = ui->comboBox_2->currentText();
     QString gen = ui->comboBox_3->currentText();
-    lista_categoriilor_luptatorilor.push_back(interval_varsta);
-    lista_categoriilor_luptatorilor.push_back(inveral_greutate);
-    lista_categoriilor_luptatorilor.push_back(gen);
+    lista_categorii.push_back(interval_varsta);
+    lista_categorii.push_back(inveral_greutate);
+    lista_categorii.push_back(gen);
 
-    return lista_categoriilor_luptatorilor;
+    return lista_categorii;
+}
+
+std::vector<QString> Clasament::getListaCategorii()
+{
+    return listaCategorii;
 }

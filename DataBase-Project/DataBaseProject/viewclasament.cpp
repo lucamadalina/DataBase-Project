@@ -17,7 +17,6 @@ ViewClasament::ViewClasament(QWidget *parent) :
     ui->tableWidget->setHorizontalHeaderLabels(QString("Denumire;Punctaj;").split(";"));
     ui->tableWidget->resize(600,600);
     int i;
-    int j;
     QTableWidgetItem *newItem;
     for(i=0; i<finalList.size(); i++){
             newItem = new QTableWidgetItem(getNumeOrganizatie(finalList[i].getIdOrganizatie()));

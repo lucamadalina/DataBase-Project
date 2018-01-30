@@ -86,6 +86,16 @@ background-color: rgb(247, 247, 182);</string>
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="b_simulareLupte">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(247, 247, 182);</string>
+      </property>
+      <property name="text">
+       <string>Simulare Lupte</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>

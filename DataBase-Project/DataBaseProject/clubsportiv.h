@@ -8,6 +8,7 @@ class ClubSportiv
 public:
     ClubSportiv();
     ClubSportiv(int id, QString denumire, QString tara, QString adresa);
+     ClubSportiv( QString denumire, QString tara, QString adresa);
     int getId();
     QString getDenumire();
     QString getTara();

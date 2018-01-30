@@ -17,10 +17,9 @@ addCategorieVarsta::~addCategorieVarsta()
 void addCategorieVarsta::on_b_addCatVarsta_clicked()
 {
     bool ok = true;
-    int id=ui->id->toPlainText().toInt(&ok);
     int prag_min=ui->prag_min->toPlainText().toInt(&ok);
     int prag_max=ui->prag_max->toPlainText().toInt(&ok);
-    CategorieVarsta cv(id, prag_min, prag_max);
+    CategorieVarsta cv( prag_min, prag_max);
     if(!ok)
     {
         //QMessageBox::warning(this, tr("Error"), tr("id, varsta, greutate, id_club trebuie sa fie numere"));

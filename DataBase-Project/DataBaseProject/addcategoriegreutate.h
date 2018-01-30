@@ -17,7 +17,6 @@ public:
     ~addcategoriegreutate();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_b_adCategorie_clicked();
 

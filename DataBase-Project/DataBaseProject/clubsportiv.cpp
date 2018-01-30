@@ -5,10 +5,17 @@ ClubSportiv::ClubSportiv()
 
 }
 ClubSportiv::ClubSportiv(int id, QString denumire, QString tara, QString adresa){
-            this->id = id;
-            this->denumire = denumire;
-            this->adresa = adresa;
-            this->tara = tara;
+   this->id = id;
+   this->denumire = denumire;
+   this->adresa = adresa;
+   this->tara = tara;
+}
+
+ClubSportiv::ClubSportiv(QString denumire, QString tara, QString adresa)
+{
+    this->denumire = denumire;
+    this->adresa = adresa;
+this->tara = tara;
 }
 int ClubSportiv::getId(){
     return this->id;

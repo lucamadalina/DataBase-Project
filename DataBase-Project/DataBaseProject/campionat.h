@@ -10,6 +10,8 @@ class Campionat
 public:
     Campionat(int id, QString denumire, int puncteParticipare,  QString locatie,
         int puncteRunda1, int puncteSemiFinala, int puncteFinala);
+    Campionat( QString denumire, int puncteParticipare,  QString locatie,
+        int puncteRunda1, int puncteSemiFinala, int puncteFinala);
     ~Campionat();
 
     int getId();

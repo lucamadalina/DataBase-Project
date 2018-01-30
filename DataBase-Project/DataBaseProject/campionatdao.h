@@ -8,7 +8,6 @@ class CampionatDao
 {
 public:
     CampionatDao();
-    //SportivDao(QSqlDatabase &m_db);
     void existTable();
     void AddCampionat(Campionat& campionat);
     void RemoveCampionat(int id);

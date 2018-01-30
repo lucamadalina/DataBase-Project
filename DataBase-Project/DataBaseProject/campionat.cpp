@@ -14,6 +14,17 @@ Campionat::Campionat(int id, QString denumire, int puncteParticipare, QString lo
     this->puncteFinala = puncteFinala;
 
 }
+
+Campionat::Campionat(QString denumire, int puncteParticipare, QString locatie, int puncteRunda1, int puncteSemiFinala, int puncteFinala)
+{
+    this->denumire = denumire;
+    this->locatie = locatie;
+    this->puncteParticipare = puncteParticipare;
+    this->puncteRunda1 = puncteRunda1;
+    this->puncteSemiFinala = puncteSemiFinala;
+    this->puncteFinala = puncteFinala;
+}
+
 Campionat::~Campionat(){
 
 }

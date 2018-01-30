@@ -7,6 +7,7 @@ class CategorieVarsta
 public:
     CategorieVarsta();
     CategorieVarsta(int id, int prag_min, int prag_max);
+    CategorieVarsta(int prag_min, int prag_max);
     int getId();
     int getPragMin();
     int getPragMax();

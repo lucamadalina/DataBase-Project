@@ -26,6 +26,8 @@ private slots:
 
     void on_b_adSportiv_clicked();
 
+    void on_b_simulareLupte_clicked();
+
 private:
     Ui::AdministrareCompetitiePage *ui;
     MainWindow *mn;

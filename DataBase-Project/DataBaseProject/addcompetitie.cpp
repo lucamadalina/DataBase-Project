@@ -33,9 +33,8 @@ void AddCompetitie::on_Add_competitie_clicked()
     int puncteRunda1 = ui->puncte_runda1->toPlainText().toInt(&ok);
     int puncteSemiFinala = ui->puncte_semifinala->toPlainText().toInt(&ok);
     int puncteFinala = ui->puncte_finala->toPlainText().toInt(&ok);
-    int id = ui->id->toPlainText().toInt(&ok);
 
-    Campionat competitie(id, denumire, puncteParticipare, locatie, puncteRunda1, puncteSemiFinala, puncteFinala);
+    Campionat competitie(denumire, puncteParticipare, locatie, puncteRunda1, puncteSemiFinala, puncteFinala);
 
     if(ok){
       campionatDao.AddCampionat(competitie);

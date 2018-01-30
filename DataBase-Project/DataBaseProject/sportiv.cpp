@@ -16,6 +16,28 @@ Sportiv::Sportiv(int id, QString nume, QString prenume, int varsta,
     this->id_clubSportiv = id_clubSportiv;
 
 }
+
+Sportiv::Sportiv(QString nume, QString prenume,long cnp, int varsta, int greutate, QString tara, QString gen, int id_clubSportiv)
+{
+    this->nume = nume;
+    this->prenume = prenume;
+    this->cnp = cnp;
+    this->tara = tara;
+    this->gen = gen;
+    this->varsta = varsta;
+    this->greutate = greutate;
+    this->id_clubSportiv = id_clubSportiv;
+
+}
+
+Sportiv::Sportiv(QString nume, QString prenume, int varsta, int greutate)
+{
+    this->nume = nume;
+    this->prenume = prenume;
+    this->varsta = varsta;
+    this->greutate = greutate;
+
+}
 int Sportiv::getId(){
     return this->id;
 }
@@ -40,4 +62,9 @@ int Sportiv::getGreutate(){
 }
 int Sportiv::getIdClubSportiv(){
     return this->id_clubSportiv;
+}
+
+long Sportiv::getCNP()
+{
+    return this->cnp;
 }

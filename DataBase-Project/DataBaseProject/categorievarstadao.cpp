@@ -15,12 +15,11 @@ void CategorieVarstaDao::AddCategorieVarsta(CategorieVarsta& categorieVarsta)
 {
 
     m_db = mw->getDataBase();
-    int id = categorieVarsta.getId();
     int prag_min = categorieVarsta.getPragMin();
     int prag_max = categorieVarsta.getPragMax();
-    QString values = "INSERT INTO categorie_varsta values("+QString::number(id)+", "+QString::number(prag_min)+", "+QString::number(prag_max)+")";
+    QString values = "INSERT INTO categorie_varsta(prag_min, prag_max) values("+QString::number(prag_min)+", "+QString::number(prag_max)+")";
     QSqlQuery query(m_db);
-        query.prepare("INSERT INTO categorie_varsta values(:id, :prag_min, prag_max");
+        query.prepare("INSERT INTO categorie_varsta values(:prag_min, prag_max");
 
             int ok = query.exec(values);
             if(ok == 0)

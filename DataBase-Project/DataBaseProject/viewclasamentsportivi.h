@@ -18,7 +18,7 @@ public:
     explicit ViewClasamentSportivi(QWidget *parent = 0);
     ~ViewClasamentSportivi();
     std::vector<ClasamentSportivi> AfisareClasament();
-    QString getNumeLuptator(int id);
+    Sportiv getSportiv(int id);
     std::vector<ClasamentSportivi> setOrdaring(std::vector<ClasamentSportivi> list);
 
 private slots:

@@ -8,6 +8,11 @@ CategorieGen::CategorieGen(int id, QString gen){
     this->id = id;
     this->gen = gen;
 }
+
+CategorieGen::CategorieGen(QString gen)
+{
+    this->gen = gen;
+}
 int CategorieGen::getId(){
     return this->id;
 }

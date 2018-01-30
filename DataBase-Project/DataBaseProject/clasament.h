@@ -26,7 +26,8 @@ class Clasament : public QDialog
 public:
     explicit Clasament(QWidget *parent = 0);
     ~Clasament();
-    std::vector<QString> GetMemberForAfisareClasament();
+    std::vector<QString> getCategoriiSelectate();
+    std::vector<QString> getListaCategorii();
 
 private slots:
     void on_b_back_clicked();

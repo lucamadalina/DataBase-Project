@@ -4,7 +4,9 @@
 #include<QSqlDatabase>
 #include<vector>
 #include "mainwindow.h"
+#include "clubsportiv.h"
 
+using namespace std;
 class Sportiv;
 
 class SportivDao
@@ -18,12 +20,15 @@ public:
     int calculateIdCategorieGreutate(int greutate);
     int calculateIdCategorieVarsta(int varsta);
     int calculateIdCategorieGen(QString gen);
-    std::vector<Sportiv> getSportivi();
+    int getIdVarstaGreutateGen(int gen, int greutate, int varsta);
+    QList<Sportiv> getSportivi();
+    QList<Sportiv> getSportiviSimulare(int id);
 
 private:
     bool SportivExist(int id);
     MainWindow* mw;
     QSqlDatabase m_db;
+
 };
 
 #endif // SPORTIVDAO_H

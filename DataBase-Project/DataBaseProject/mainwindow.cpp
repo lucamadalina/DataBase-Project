@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "AddCompetitie.h"
 #include "clasament.h"
+
 #include "administrarecompetitiepage.h"
 #include <QSqlQuery>
 #include <QSqlError>
@@ -94,3 +95,4 @@ void MainWindow::on_p_AdCampionat_clicked()
  {
      return m_db;
   }
+

@@ -7,6 +7,7 @@ class CategorieGen
 public:
     CategorieGen();
      CategorieGen(int id, QString gen);
+     CategorieGen(QString gen);
      int getId();
      QString getGen();
 

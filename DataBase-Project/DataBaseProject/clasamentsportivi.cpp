@@ -12,6 +12,18 @@ ClasamentSportivi::ClasamentSportivi(int id,int id_categorie_greutate,int id_cat
     this->id_categorie_varsta = id_categorie_varsta;
     this->nr_puncte = nr_puncte;
 }
+
+ClasamentSportivi::ClasamentSportivi(QString numeSportiv, int nr_puncte)
+{
+    this->numeSportiv = numeSportiv;
+    this->nr_puncte = nr_puncte;
+}
+
+ClasamentSportivi::ClasamentSportivi(Sportiv sportiv, int nr_puncte)
+{
+    this->sportiv = sportiv;
+    this->nr_puncte = nr_puncte;
+}
 int ClasamentSportivi::getId(){
     return  this->id;
 }
@@ -26,4 +38,14 @@ int ClasamentSportivi::getIdCategorieGen(){
 }
 int ClasamentSportivi::getNumarPuncte(){
     return this->nr_puncte;
+}
+
+QString ClasamentSportivi::getNumeSportiv()
+{
+    return this->sportiv.getNume();
+}
+
+Sportiv ClasamentSportivi::getSportiv()
+{
+    return this->sportiv;
 }
